@@ -84,13 +84,13 @@ We received data in json format from News API. We opted to pursue the strategy o
 
 
 ```
-	• We get the article with the same ID as the news item that was clicked on the previous page. And the content of the article is displayed on the page.
-	• This requires that the user is logged in.
-	• We had implemented, JWT and secure routes for entrance into certain areas of the website.
-	• When a user clicks a reaction image, a reaction object of the reaction type is made and the state of reaction is updated (useSatate).
-	• When the state of reaction changes a useEffect is called, which post the reaction to the backend reaction model.
-	• We also implement a useState where the colour of the button is conditional on whether it has been clicked.
-	• There is a test input box where users can type comments to each individual article, a handleComment function, performs an axios.post to the backend.
+• We get the article with the same ID as the news item that was clicked on the previous page. And the content of the article is displayed on the page.
+• This requires that the user is logged in.
+• We had implemented, JWT and secure routes for entrance into certain areas of the website.
+• When a user clicks a reaction image, a reaction object of the reaction type is made and the state of reaction is updated (useSatate).
+• When the state of reaction changes a useEffect is called, which post the reaction to the backend reaction model.
+• We also implement a useState where the colour of the button is conditional on whether it has been clicked.
+• There is a test input box where users can type comments to each individual article, a handleComment function, performs an axios.post to the backend.
   
 ```
 
