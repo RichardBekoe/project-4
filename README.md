@@ -62,12 +62,12 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 
 ### Country Articles Page
 
-• The code for the country articles page involves translating the country name from the URL (variable)
-• There is a search in the dictionary (countryEmojiMap) of country name and flags.
-• Therefore, a country is assigned a flag image.
-• This information is saved in the backend, using the article model
-• The page then changes to the 'singlearticle' page 
-• The ID of article which is saved in the database is retrieved, therefore the user is redirected to that specific page with the selected article
+- The code for the country articles page involves translating the country name from the URL (variable)
+- There is a search in the dictionary (countryEmojiMap) of country name and flags.
+- Therefore, a country is assigned a flag image.
+- This information is saved in the backend, using the article model
+- The page then changes to the 'singlearticle' page 
+- The ID of article which is saved in the database is retrieved, therefore the user is redirected to that specific page with the selected article
 
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/CountryArticles.js)
 
@@ -102,12 +102,12 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 - The relationship between the reactions and the articles could be described as many-to-many (i.e. reactions = db.relationship( "Reaction", secondary=articles_reactions, backref="articles")
 - We had to implement the modification of the reactions array for each article in the join table
 - The method of adding a reaction to an article involved:
-	○ posting a reaction to the backend
-	○ loading new reaction to schema
-	○ finding article by ID
-	○ saving new reaction
-	○ joining article with new reactions  (i.e. existing_article.reactions = existing_article.reactions + [new_reaction] )
-	○ article.save()
+	- posting a reaction to the backend
+	- loading new reaction to schema
+	- finding article by ID
+	- saving new reaction
+	- joining article with new reactions  (i.e. existing_article.reactions = existing_article.reactions + [new_reaction] )
+	- article.save()
 
 - In the backend the base.py model allows methods such as, save and remove to be available for controllers to use. It also provides the 'created and updated at' times. 
 
