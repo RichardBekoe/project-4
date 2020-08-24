@@ -37,6 +37,8 @@ We decided on using News API as the main source of data for our application. We 
 ## Wireframe
 
 For the purpose of planning our user journey, feature connectivity and points of access to data we constructed a wireframe that outlined the web application.
+![UX Wireframe](./Flag%20Pieces%20Wireframe.png)
+[View Wireframe (figma.com)](https://www.figma.com/file/4Q0PFrOh3O7B23JmRmqdVw/PROJECT-R?node-id=0%3A1)
 
 ## Responsibilities and Code Review
 
