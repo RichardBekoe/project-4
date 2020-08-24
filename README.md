@@ -55,6 +55,7 @@ We received data in json format from News API. We opted to pursue the strategy o
 • The country name is stored in the URL as a variable; the information can then be passed to the next page (country articles page). There the country
   variable would be set to the same value (e.g. const country = props.match.params.country)
 ```
+Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/HomePage.js)
 
 ### Country Articles Page
 
@@ -66,6 +67,7 @@ We received data in json format from News API. We opted to pursue the strategy o
 • The page then changes to the 'singlearticle' page 
 • The ID of article which is saved in the database is retrieved, therefore the user is redirected to that specific page with the selected article
 ```
+Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/CountryArticles.js)
 
 ### Feed Page
 
@@ -79,6 +81,7 @@ We received data in json format from News API. We opted to pursue the strategy o
 • An alternate for this could be to redesign our backend to create models which categorise the articles by reaction type.
 
 ```
+Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/FeedPage.js)
 
 ### Single Article Page
 
@@ -93,6 +96,7 @@ We received data in json format from News API. We opted to pursue the strategy o
 • There is a test input box where users can type comments to each individual article, a handleComment function, performs an axios.post to the backend.
   
 ```
+Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/SingleArticle.js)
 
 ### Reactions Backend Code
 
@@ -110,6 +114,8 @@ We received data in json format from News API. We opted to pursue the strategy o
 • In the backend the base.py model allows methods such as, save and remove to be available for controllers to use. It also provides the 'created and updated at' times. 
 
 ```
+Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/backend/models/article.py)
+
 ## Challenges and Key Learnings
 
 The importance of planning, reviewing and revising code structure was a key learning point. For example, we initially had additional backend models but did not use them. Instead we joined the information as fields on other existing models. Alternatively, we also stored the information on the frontend of the application (e.g. the maps data).
