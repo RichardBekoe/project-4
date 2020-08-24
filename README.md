@@ -50,31 +50,30 @@ Throughout this project we worked in collaboration (Raquel Cruickshank and I) an
 We received data in json format from News API. We opted to pursue the strategy of storing the data into our backend database after the user interacted with the application by selecting to read an article. An advantage of this approach was that filtering of the data could be applied before storage in our backend. For example, we had the opportunity to delete some non essential keys from an API object before storing the information in the backend. Also quality control of the data could be applied to ensure a consistent and predictable user experience.
 
 ### Home Page
-```
+
 • For the homepage  I used Mapbox API to implement an interactive map.
 • The country map data, including the latitude and longitude, was saved as an array of objects on the frontend.
 • On click, the users selects a country to activate a popup. 
 • Within the popup is the country name, flag and a link to the next page. 
 • The country name is stored in the URL as a variable; the information can then be passed to the next page (country articles page). There the country
   variable would be set to the same value (e.g. const country = props.match.params.country)
-```
+  
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/HomePage.js)
 
 ### Country Articles Page
 
-```
 • The code for the country articles page involves translating the country name from the URL (variable)
 • There is a search in the dictionary (countryEmojiMap) of country name and flags.
 • Therefore, a country is assigned a flag image.
 • This information is saved in the backend, using the article model
 • The page then changes to the 'singlearticle' page 
 • The ID of article which is saved in the database is retrieved, therefore the user is redirected to that specific page with the selected article
-```
+
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/CountryArticles.js)
 
 ### Feed Page
 
-```
+
 • On the feed page we aimed to filter the articles by the reaction type i.e. 😂 😊 😲 😓 😠
 • To do this we use the useEffect hook to get all the articles upon mounting the page.
 • We used the filter method to filter through all the articles. We then mapped through the array of reactions. 
@@ -83,13 +82,11 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 • However, as we carried out the filter through all the articles in the database, this method may not scale or be very efficient when the database is very large
 • An alternate for this could be to redesign our backend to create models which categorise the articles by reaction type.
 
-```
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/FeedPage.js)
 
 ### Single Article Page
 
 
-```
 • We get the article with the same ID as the news item that was clicked on the previous page. And the content of the article is displayed on the page.
 • This requires that the user is logged in.
 • We had implemented, JWT and secure routes for entrance into certain areas of the website.
@@ -97,13 +94,11 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 • When the state of reaction changes a useEffect is called, which post the reaction to the backend reaction model.
 • We also implement a useState where the colour of the button is conditional on whether it has been clicked.
 • There is a test input box where users can type comments to each individual article, a handleComment function, performs an axios.post to the backend.
-  
-```
+
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/SingleArticle.js)
 
 ### Reactions Backend Code
 
-```
 • The relationship between the reactions and the articles could be described as many-to-many (i.e. reactions = db.relationship( "Reaction", secondary=articles_reactions, backref="articles")
 • We had to implement the modification of the reactions array for each article in the join table
 • The method of adding a reaction to an article involved:
@@ -116,7 +111,7 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 
 • In the backend the base.py model allows methods such as, save and remove to be available for controllers to use. It also provides the 'created and updated at' times. 
 
-```
+
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/backend/models/article.py)
 
 ## Challenges and Key Learnings
