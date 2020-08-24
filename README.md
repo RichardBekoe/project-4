@@ -51,11 +51,11 @@ We received data in json format from News API. We opted to pursue the strategy o
 
 ### Home Page
 
-• For the homepage  I used Mapbox API to implement an interactive map.
-• The country map data, including the latitude and longitude, was saved as an array of objects on the frontend.
-• On click, the users selects a country to activate a popup. 
-• Within the popup is the country name, flag and a link to the next page. 
-• The country name is stored in the URL as a variable; the information can then be passed to the next page (country articles page). There the country
+- For the homepage  I used Mapbox API to implement an interactive map.
+- The country map data, including the latitude and longitude, was saved as an array of objects on the frontend.
+- On click, the users selects a country to activate a popup. 
+- Within the popup is the country name, flag and a link to the next page. 
+- The country name is stored in the URL as a variable; the information can then be passed to the next page (country articles page). There the country
   variable would be set to the same value (e.g. const country = props.match.params.country)
   
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/HomePage.js)
@@ -74,34 +74,34 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 ### Feed Page
 
 
-• On the feed page we aimed to filter the articles by the reaction type i.e. 😂 😊 😲 😓 😠
-• To do this we use the useEffect hook to get all the articles upon mounting the page.
-• We used the filter method to filter through all the articles. We then mapped through the array of reactions. 
-• A selection of articles of a particular reaction type,  would then be displayed on the page.
-• This functionality provides the user a way to dynamically filter content based on users rated sentiment.
-• However, as we carried out the filter through all the articles in the database, this method may not scale or be very efficient when the database is very large
-• An alternate for this could be to redesign our backend to create models which categorise the articles by reaction type.
+- On the feed page we aimed to filter the articles by the reaction type i.e. 😂 😊 😲 😓 😠
+- To do this we use the useEffect hook to get all the articles upon mounting the page.
+- We used the filter method to filter through all the articles. We then mapped through the array of reactions. 
+- A selection of articles of a particular reaction type,  would then be displayed on the page.
+- This functionality provides the user a way to dynamically filter content based on users rated sentiment.
+- However, as we carried out the filter through all the articles in the database, this method may not scale or be very efficient when the database is very large
+- An alternate for this could be to redesign our backend to create models which categorise the articles by reaction type.
 
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/FeedPage.js)
 
 ### Single Article Page
 
 
-• We get the article with the same ID as the news item that was clicked on the previous page. And the content of the article is displayed on the page.
-• This requires that the user is logged in.
-• We had implemented, JWT and secure routes for entrance into certain areas of the website.
-• When a user clicks a reaction image, a reaction object of the reaction type is made and the state of reaction is updated (useSatate).
-• When the state of reaction changes a useEffect is called, which post the reaction to the backend reaction model.
-• We also implement a useState where the colour of the button is conditional on whether it has been clicked.
-• There is a test input box where users can type comments to each individual article, a handleComment function, performs an axios.post to the backend.
+- We get the article with the same ID as the news item that was clicked on the previous page. And the content of the article is displayed on the page.
+- This requires that the user is logged in.
+- We had implemented, JWT and secure routes for entrance into certain areas of the website.
+- When a user clicks a reaction image, a reaction object of the reaction type is made and the state of reaction is updated (useSatate).
+- When the state of reaction changes a useEffect is called, which post the reaction to the backend reaction model.
+- We also implement a useState where the colour of the button is conditional on whether it has been clicked.
+- There is a test input box where users can type comments to each individual article, a handleComment function, performs an axios.post to the backend.
 
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/frontend/src/components/SingleArticle.js)
 
 ### Reactions Backend Code
 
-• The relationship between the reactions and the articles could be described as many-to-many (i.e. reactions = db.relationship( "Reaction", secondary=articles_reactions, backref="articles")
-• We had to implement the modification of the reactions array for each article in the join table
-• The method of adding a reaction to an article involved:
+- The relationship between the reactions and the articles could be described as many-to-many (i.e. reactions = db.relationship( "Reaction", secondary=articles_reactions, backref="articles")
+- We had to implement the modification of the reactions array for each article in the join table
+- The method of adding a reaction to an article involved:
 	○ posting a reaction to the backend
 	○ loading new reaction to schema
 	○ finding article by ID
@@ -109,7 +109,7 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master
 	○ joining article with new reactions  (i.e. existing_article.reactions = existing_article.reactions + [new_reaction] )
 	○ article.save()
 
-• In the backend the base.py model allows methods such as, save and remove to be available for controllers to use. It also provides the 'created and updated at' times. 
+- In the backend the base.py model allows methods such as, save and remove to be available for controllers to use. It also provides the 'created and updated at' times. 
 
 
 Link - [Referenced Code](https://github.com/RichardBekoe/Flag-Pieces/blob/master/backend/models/article.py)
