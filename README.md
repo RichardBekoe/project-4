@@ -1,4 +1,4 @@
-# Project 4 - Flag Pieces
+# Flag Pieces - Project 4
 
 ## Contents
 
