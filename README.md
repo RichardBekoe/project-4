@@ -100,12 +100,12 @@ We received data in json format from News API. We opted to pursue the strategy o
 • The relationship between the reactions and the articles could be described as many-to-many (i.e. reactions = db.relationship( "Reaction", secondary=articles_reactions, backref="articles")
 • We had to implement the modification of the reactions array for each article in the join table
 • The method of adding a reaction to an article involved:
-		○ posting a reaction to the backend
-		○ loading new reaction to schema
-		○ finding article by ID
-		○ saving new reaction
-		○ joining article with new reactions  (i.e. existing_article.reactions = existing_article.reactions + [new_reaction] )
-		○ article.save()
+	○ posting a reaction to the backend
+	○ loading new reaction to schema
+	○ finding article by ID
+	○ saving new reaction
+	○ joining article with new reactions  (i.e. existing_article.reactions = existing_article.reactions + [new_reaction] )
+	○ article.save()
 
 • In the backend the base.py model allows methods such as, save and remove to be available for controllers to use. It also provides the 'created and updated at' times. 
 
