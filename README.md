@@ -1,5 +1,7 @@
 # Flag Pieces - Project 4
 
+![Flagpieces-image](./Flagpieces.png)
+
 ## Contents
 
 - [Contents](#contents)
