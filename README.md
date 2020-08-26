@@ -33,6 +33,10 @@ We also did further planning with the use of a Trello board, this helped as to m
 
 ![trello-image](./trello-board.png)
 
+In addition, in the initial planning stages we constructed an entity relationship diagram (ERD). Howver, as discussed below, some changes were made the backend structure as we progressed through the project. Thinking through the creation of the diagram allowed us to think deeply about how our data was related and the fundamental data types used.
+
+![entity-relationship-diagram](./entity-relationship-diagram.png)
+
 ## Technologies Used
 
 - HTML; CSS/Sass; JavaScript; React
