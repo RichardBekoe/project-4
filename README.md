@@ -17,7 +17,7 @@
   - [Single Article Page](#single-article-page)
   - [Reactions Backend Code](#reactions-backend-code)
 - [Challenges and Key Learnings](#challenges-and-key-learnings)
-- [Conclusions](#conclusions)
+- [Conclusions and Achievements](#conclusions-and-achievements)
 - [Bugs](#bugs)
 
 
@@ -126,7 +126,7 @@ However, with a large dataset this may not be a feasible option, as it may slow 
 
 In addition, we envisioned further functionalities such as backend controllers so that people could save articles to their user page, which they had filtered by reaction.  These are skills that we would build on in the future.
 
-## Conclusions
+## Conclusions and Achievements
 
 Overall, I am very pleased with the outcome of our project work, of which was completed to fixed time constraints. I am appreciative of the team's determination to achieve a high standard. I am pleased with how we crafted the initial data we received and added and removed fields from the original information, for example, country flags and reaction images to tailor the needs of our application.
 	
