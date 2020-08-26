@@ -135,4 +135,4 @@ I enjoyed how we could architect the frontend interaction with the backend, and 
 ## Bugs
 
 - We used JWT and local storage to set user tokens to indicate when users are logged in. This also allows the access to pages based on whether a user is logged in. To improve the user experience we could further suggest or prompt at what points they would need to be logged to access particular information (such as when clicking on the 'Read' button on the country articles page).
-- Given the time, I would also have implemented a more aesthetically pleasing and functionally easier to use map design with clearer map labels for the homepage.
+- Given the time, I would also have implemented a more aesthetically pleasing and functionally easier to use map design, with clearer map labels, for the homepage.
