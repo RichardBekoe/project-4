@@ -29,6 +29,10 @@ Build a full-stack application by making your own backend and your own front-end
 
 We decided on using News API as the main source of data for our application. We appreciated the way that the API was continuously updated so we could provide recent information for the user. We wanted to add our own unique features to the data by adding further fields such as flag images and user reactions. This would allow for a more interactive application and foster a distinctive appeal. Our aim was to make the application as open as possible therefore, user login pages are on selected pages only and accessibility and usability is prioritized. The timeline for this project was 1 week: this started with the initial conceptualisation of the idea; producing a wireframe; constructing a backend and creating a visually engaging frontend. As the collaboration was largely remote we communicated through the use of online video conferencing applications.
 
+We also did further planning with the use of a Trello board, this helped as to manage our time and keep a record of the tasks that needed to be completed and reviewed.
+
+![trello-image](./trello-board.png)
+
 ## Technologies Used
 
 - HTML; CSS/Sass; JavaScript; React
